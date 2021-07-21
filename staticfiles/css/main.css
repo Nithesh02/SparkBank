@@ -1,0 +1,291 @@
+.navbar {
+    background-color: #f07167;
+}
+
+body {
+    background-color: #f8edeb;
+}
+
+img {
+    width: 600px;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 200px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: #f07167;
+}
+
+.content h4 {
+    padding: 20px 0px;
+}
+
+.content .logo {
+    color: #f07167;
+}
+
+.content a {
+    color: #f07167;
+    border: 1px solid #f0706793;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 25px 80px;
+    transition: background-color 400ms ease-in-out;
+}
+
+.content a:hover {
+    background-color: #a44a3f;
+    color: white;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+@media (max-width:900px) {
+    .main {
+        flex-direction: column;
+    }
+}
+
+
+/* ----------
+
+New Customer Form 
+
+---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+*,
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f8edeb;
+    overflow: hidden;
+}
+
+.form-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.form-holder .form-content {
+    position: relative;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.form-content .form-items {
+    border: 3px solid #a44a3f;
+    padding: 40px;
+    display: inline-block;
+    width: 100%;
+    min-width: 540px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: left;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.form-content h3 {
+    color: #a44a3f;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+    margin-bottom: 30px;
+}
+
+.form-content p {
+    color: #a44a3f;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.form-content label,
+.was-validated .form-check-input:invalid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+    color: #a44a3f;
+}
+
+.form-content input[type=text],
+.form-content input[type=tel],
+.form-content input[type=email],
+.form-content select {
+    width: 100%;
+    padding: 9px 20px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #070707;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.btn-primary {
+    background-color: #f07167;
+    outline: none;
+    border: 0px;
+    box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #a44a3f;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+.form-content textarea {
+    position: static !important;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+}
+
+.form-content textarea:hover,
+.form-content textarea:focus {
+    border: 0;
+    background-color: #ebeff8;
+    color: #050505;
+}
+
+.mv-up {
+    margin-top: -9px !important;
+    margin-bottom: 8px !important;
+}
+
+.invalid-feedback {
+    color: #a44a3f;
+}
+
+.valid-feedback {
+    color: #a44a3f;
+}
+
+
+/* -----------
+
+View Customer
+
+------------ */
+
+.customer-deatails h2 {
+    margin: 20px 0px;
+    text-align: center;
+    color: #a44a3f;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.thead {
+    background-color: #f0706791;
+    color: #a44a3f;
+}
+
+.view {
+    border: 1px solid #a44a3f;
+    color: #a44a3f;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 9px 25px;
+    background-color: #f0706765;
+}
+
+.view:hover {
+    background-color: #a44a3f;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* --------------
+
+Customer details
+
+--------------- */
+
+.customer-details h2 {
+    text-align: center;
+    margin: 20px 0px;
+    color: #a44a3f;
+}
+
+.transfer {
+    border: 1px solid #a44a3f;
+    background-color: #f0706765;
+    border-radius: 5px;
+    color: #a44a3f;
+    padding: 10px 25px;
+}
+
+.transfer:hover {
+    background-color: #a44a3f;
+    color: white;
+}

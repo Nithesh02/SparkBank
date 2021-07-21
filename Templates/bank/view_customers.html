@@ -1,0 +1,37 @@
+{% extends 'bank/base.html' %}{% load static %} {% block title %}View Customers{% endblock title %} {%block body %}
+
+<div class="customer-deatails">
+    <h2>Customer Details</h2>
+
+    <div class="container">
+        <table class="table table-bordered  table-responsive-sm">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Email Adress</th>
+                    <th scope="col">Current Balance</th>
+                    <th scope="col">View Customer</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for customer in customers %}
+                <tr>
+                    <th scope="row">{{customer.name}}</th>
+                    <td>{{customer.number}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.current_balance}}</td>
+                    <td><a class="view" href="{% url 'customer_details' customer.id %}">View</a></td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+<p>}</p>
+<p>{{customer.current_balance}}</p>
+{% endblock body %}

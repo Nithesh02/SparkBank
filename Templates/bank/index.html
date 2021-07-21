@@ -1,0 +1,17 @@
+{% extends 'bank/base.html' %}{% load static %} {% block title %}Home page{% endblock title %} {%block body %}
+
+<!-- main content -->
+<section class="main">
+    <div class="content">
+        <i class="fa fa-bank logo" style="font-size:60px"></i>
+        <h4>Welcome to The Spark Foundation Bank</h4>
+        <p>All banking services at one place</p>
+        <a href="{% url 'new_customer' %}">New Customer</a>
+        <a href="{% url 'view_customers' %}">View All Customers</a>
+    </div>
+    <div class="image">
+        <img src="{% static 'images/bank.png' %}" alt="">
+    </div>
+</section>
+
+{% endblock body %}

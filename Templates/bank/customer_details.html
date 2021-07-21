@@ -1,0 +1,45 @@
+{% extends 'bank/base.html' %}{% load static %} {% block title %}Customer Detail{% endblock title %} {%block body %}
+<div class="container customer-details">
+    <h2>Customer Details</h2>
+
+    <table class="table table-bordered  table-responsive-sm">
+        <tbody>
+            <tr>
+                <th scope="row">Name</th>
+                <td name="sender_name">{{customer.name}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Mobile Number</th>
+                <td>{{customer.number}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Email</th>
+                <td>{{customer.email}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Current Balance</th>
+                <td>{{customer.current_balance}}</td>
+            </tr>
+            <form action="" method="post">
+                {% csrf_token %}
+                <tr>
+                    <th scope="row">Transfer Amount</th>
+                    <td><input type="number" name="amount" placeholder="Amount"></td>
+                </tr>
+                <th scope="row">Transfer To</th>
+                <td>
+                    <div>
+                        <!-- <label for="customer_name">Customer Name</label> -->
+                        <select id="customer_name" class="form-control" name="receiver_name" placeholder="Name">
+                    {% for customer in customers %}
+                  <option selected>{{customer.name}}</option>
+                    {% endfor %}
+                </select>
+                </td>
+        </tbody>
+    </table>
+
+    <button class="transfer" type="submit"> Transfer</button>
+    </form>
+    </div>
+    {% endblock body %}
